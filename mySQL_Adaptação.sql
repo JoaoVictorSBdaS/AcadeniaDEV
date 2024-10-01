@@ -19,30 +19,31 @@ CREATE TABLE Alunos (
     informacoes_medicas TEXT,
     data_matricula DATE NOT NULL,
     peso FLOAT NOT NULL,
-    altura FLOAT NOT NULL
+    altura FLOAT NOT NULL,
+    sexo VARCHAR(1)
+    
 );
 
-INSERT INTO Alunos (nome, CPF, email, senha, data_nascimento, endereco, telefone, informacoes_medicas, data_matricula, peso, altura) VALUES
-('Aluno 1', '123.456.789-00', 'aluno1@example.com', 'senha123', '2000-01-01', 'Endereço 1', '11987654321', 'Nenhuma', '2024-01-01', 70.5, 1.75),
-('Aluno 2', '234.567.890-01', 'aluno2@example.com', 'senha123', '2001-02-02', 'Endereço 2', '11987654322', 'Alergia a pó', '2024-01-02', 68.0, 1.70),
-('Aluno 3', '345.678.901-02', 'aluno3@example.com', 'senha123', '2002-03-03', 'Endereço 3', '11987654323', 'Nenhuma', '2024-01-03', 80.0, 1.80),
-('Aluno 4', '456.789.012-03', 'aluno4@example.com', 'senha123', '2003-04-04', 'Endereço 4', '11987654324', 'Diabetes', '2024-01-04', 75.0, 1.65),
-('Aluno 5', '567.890.123-04', 'aluno5@example.com', 'senha123', '2004-05-05', 'Endereço 5', '11987654325', 'Nenhuma', '2024-01-05', 90.0, 1.85),
-('Aluno 6', '678.901.234-05', 'aluno6@example.com', 'senha123', '2005-06-06', 'Endereço 6', '11987654326', 'Hipertensão', '2024-01-06', 85.0, 1.78),
-('Aluno 7', '789.012.345-06', 'aluno7@example.com', 'senha123', '2006-07-07', 'Endereço 7', '11987654327', 'Nenhuma', '2024-01-07', 60.0, 1.60),
-('Aluno 8', '890.123.456-07', 'aluno8@example.com', 'senha123', '2007-08-08', 'Endereço 8', '11987654328', 'Alergia a leite', '2024-01-08', 77.0, 1.72),
-('Aluno 9', '901.234.567-08', 'aluno9@example.com', 'senha123', '2008-09-09', 'Endereço 9', '11987654329', 'Nenhuma', '2024-01-09', 82.0, 1.80),
-('Aluno 10', '012.345.678-09', 'aluno10@example.com', 'senha123', '2009-10-10', 'Endereço 10', '11987654330', 'Asma', '2024-01-10', 72.0, 1.68),
-('Aluno 11', '123.456.789-11', 'aluno11@example.com', 'senha123', '2010-11-11', 'Endereço 11', '11987654331', 'Nenhuma', '2024-01-11', 88.0, 1.76),
-('Aluno 12', '234.567.890-12', 'aluno12@example.com', 'senha123', '2011-12-12', 'Endereço 12', '11987654332', 'Hipertensão', '2024-01-12', 90.0, 1.74),
-('Aluno 13', '345.678.901-13', 'aluno13@example.com', 'senha123', '2012-01-13', 'Endereço 13', '11987654333', 'Nenhuma', '2024-01-13', 65.0, 1.62),
-('Aluno 14', '456.789.012-14', 'aluno14@example.com', 'senha123', '2013-02-14', 'Endereço 14', '11987654334', 'Alergia a glúten', '2024-01-14', 74.0, 1.70),
-('Aluno 15', '567.890.123-15', 'aluno15@example.com', 'senha123', '2014-03-15', 'Endereço 15', '11987654335', 'Nenhuma', '2024-01-15', 78.0, 1.73),
-('Aluno 16', '678.901.234-16', 'aluno16@example.com', 'senha123', '2015-04-16', 'Endereço 16', '11987654336', 'Diabetes', '2024-01-16', 82.0, 1.79),
-('Aluno 17', '789.012.345-17', 'aluno17@example.com', 'senha123', '2016-05-17', 'Endereço 17', '11987654337', 'Nenhuma', '2024-01-17', 66.0, 1.64),
-('Aluno 18', '890.123.456-18', 'aluno18@example.com', 'senha123', '2017-06-18', 'Endereço 18', '11987654338', 'Hipertensão', '2024-01-18', 80.0, 1.75),
-('Aluno 19', '901.234.567-19', 'aluno19@example.com', 'senha123', '2018-07-19', 'Endereço 19', '11987654339', 'Nenhuma', '2024-01-19', 71.0, 1.69),
-('Aluno 20', '012.345.678-20', 'aluno20@example.com', 'senha123', '2019-08-20', 'Endereço 20', '11987654340', 'Asma', '2024-01-20', 76.0, 1.77);
+INSERT INTO Alunos (nome, CPF, email, senha, data_nascimento, endereco, telefone, informacoes_medicas, data_matricula, peso, altura, sexo) VALUES
+('Ana Silva', '123.456.789-00', 'ana.silva@email.com', 'senha123', '2000-01-01', 'Rua A, 123', '12345-6789', 'Nenhuma', '2024-01-10', 60.5, 1.65, 'F'),
+('João Souza', '987.654.321-00', 'joao.souza@email.com', 'senha123', '1998-02-15', 'Rua B, 456', '98765-4321', 'Alergia a pó', '2024-01-11', 75.0, 1.80, 'M'),
+('Maria Oliveira', '111.222.333-44', 'maria.oliveira@email.com', 'senha123', '2002-03-20', 'Rua C, 789', '55555-5555', 'Nenhuma', '2024-01-12', 50.0, 1.60, 'F'),
+('Carlos Pereira', '444.555.666-77', 'carlos.pereira@email.com', 'senha123', '1995-04-25', 'Rua D, 101', '66666-6666', 'Diabetes', '2024-01-13', 85.0, 1.75, 'M'),
+('Julia Santos', '222.333.444-88', 'julia.santos@email.com', 'senha123', '2001-05-30', 'Rua E, 202', '77777-7777', 'Nenhuma', '2024-01-14', 55.0, 1.70, 'F'),
+('Lucas Lima', '333.444.555-99', 'lucas.lima@email.com', 'senha123', '1999-06-05', 'Rua F, 303', '88888-8888', 'Nenhuma', '2024-01-15', 78.0, 1.82, 'M'),
+('Fernanda Costa', '666.777.888-11', 'fernanda.costa@email.com', 'senha123', '2003-07-10', 'Rua G, 404', '99999-9999', 'Alergia a leite', '2024-01-16', 48.0, 1.55, 'F'),
+('Rafael Martins', '555.666.777-22', 'rafael.martins@email.com', 'senha123', '1997-08-15', 'Rua H, 505', '10101-0101', 'Nenhuma', '2024-01-17', 90.0, 1.90, 'M'),
+('Camila Almeida', '888.999.000-33', 'camila.almeida@email.com', 'senha123', '2000-09-20', 'Rua I, 606', '20202-0202', 'Nenhuma', '2024-01-18', 58.0, 1.68, 'F'),
+('André Barbosa', '777.888.999-44', 'andre.barbosa@email.com', 'senha123', '1998-10-25', 'Rua J, 707', '30303-0303', 'Hipertensão', '2024-01-19', 80.0, 1.80, 'M'),
+('Tatiane Rocha', '999.000.111-55', 'tatiane.rocha@email.com', 'senha123', '2002-11-30', 'Rua K, 808', '40404-0404', 'Nenhuma', '2024-01-20', 52.0, 1.65, 'F'),
+('Felipe Dias', '000.111.222-66', 'felipe.dias@email.com', 'senha123', '1996-12-05', 'Rua L, 909', '50505-0505', 'Nenhuma', '2024-01-21', 70.0, 1.78, 'M'),
+('Beatriz Martins', '121.314.151-71', 'beatriz.martins@email.com', 'senha123', '2001-01-01', 'Rua M, 1010', '60606-0606', 'Nenhuma', '2024-01-22', 53.0, 1.62, 'F'),
+('Gustavo Silva', '414.515.616-81', 'gustavo.silva@email.com', 'senha123', '1994-02-02', 'Rua N, 1111', '70707-0707', 'Nenhuma', '2024-01-23', 77.0, 1.85, 'M'),
+('Natália Costa', '616.717.818-91', 'natalia.costa@email.com', 'senha123', '1993-03-03', 'Rua O, 1212', '80808-0808', 'Nenhuma', '2024-01-24', 60.0, 1.66, 'F'),
+('Matheus Fernandes', '919.202.303-10', 'matheus.fernandes@email.com', 'senha123', '2000-04-04', 'Rua P, 1313', '90909-0909', 'Nenhuma', '2024-01-25', 72.0, 1.79, 'M'),
+('Isabella Santos', '212.323.434-20', 'isabella.santos@email.com', 'senha123', '1997-05-05', 'Rua Q, 1414', '10101-0101', 'Nenhuma', '2024-01-26', 55.0, 1.67, 'F'),
+('Leonardo Ferreira', '111.111.111-11', 'leonardo.ferreira@email.com', 'senha123', '1995-06-06', 'Rua R, 1515', '20202-0202', 'Nenhuma', '2024-01-27', 82.0, 1.88, 'M');
+
 
 
 
@@ -99,31 +100,33 @@ CREATE TABLE Funcionarios (
     CPF VARCHAR(14) NOT NULL UNIQUE,
     salario DECIMAL(10,2),
     horario_trabalho TIME NOT NULL,
-    endereco varchar(255) NOT NULL
+    endereco varchar(255) NOT NULL,
+    sexo VARCHAR(1)
 );
 
 
-INSERT INTO Funcionarios (nome, telefone, email, senha, CPF, salario, horario_trabalho, endereco) VALUES
-('Funcionário 1', '11987654321', 'funcionario1@example.com', 'senha123', '123.456.789-00', 2500.00, '09:00:00', 'Endereço 1'),
-('Funcionário 2', '11987654322', 'funcionario2@example.com', 'senha123', '234.567.890-01', 2700.00, '09:00:00', 'Endereço 2'),
-('Funcionário 3', '11987654323', 'funcionario3@example.com', 'senha123', '345.678.901-02', 2900.00, '09:00:00', 'Endereço 3'),
-('Funcionário 4', '11987654324', 'funcionario4@example.com', 'senha123', '456.789.012-03', 3100.00, '09:00:00', 'Endereço 4'),
-('Funcionário 5', '11987654325', 'funcionario5@example.com', 'senha123', '567.890.123-04', 3300.00, '09:00:00', 'Endereço 5'),
-('Funcionário 6', '11987654326', 'funcionario6@example.com', 'senha123', '678.901.234-05', 3500.00, '09:00:00', 'Endereço 6'),
-('Funcionário 7', '11987654327', 'funcionario7@example.com', 'senha123', '789.012.345-06', 3700.00, '09:00:00', 'Endereço 7'),
-('Funcionário 8', '11987654328', 'funcionario8@example.com', 'senha123', '890.123.456-07', 3900.00, '09:00:00', 'Endereço 8'),
-('Funcionário 9', '11987654329', 'funcionario9@example.com', 'senha123', '901.234.567-08', 4100.00, '09:00:00', 'Endereço 9'),
-('Funcionário 10', '11987654330', 'funcionario10@example.com', 'senha123', '012.345.678-09', 4300.00, '09:00:00', 'Endereço 10'),
-('Funcionário 11', '11987654331', 'funcionario11@example.com', 'senha123', '123.456.789-11', 4500.00, '09:00:00', 'Endereço 11'),
-('Funcionário 12', '11987654332', 'funcionario12@example.com', 'senha123', '234.567.890-12', 4700.00, '09:00:00', 'Endereço 12'),
-('Funcionário 13', '11987654333', 'funcionario13@example.com', 'senha123', '345.678.901-13', 4900.00, '09:00:00', 'Endereço 13'),
-('Funcionário 14', '11987654334', 'funcionario14@example.com', 'senha123', '456.789.012-14', 5100.00, '09:00:00', 'Endereço 14'),
-('Funcionário 15', '11987654335', 'funcionario15@example.com', 'senha123', '567.890.123-15', 5300.00, '09:00:00', 'Endereço 15'),
-('Funcionário 16', '11987654336', 'funcionario16@example.com', 'senha123', '678.901.234-16', 5500.00, '09:00:00', 'Endereço 16'),
-('Funcionário 17', '11987654337', 'funcionario17@example.com', 'senha123', '789.012.345-17', 5700.00, '09:00:00', 'Endereço 17'),
-('Funcionário 18', '11987654338', 'funcionario18@example.com', 'senha123', '890.123.456-18', 5900.00, '09:00:00', 'Endereço 18'),
-('Funcionário 19', '11987654339', 'funcionario19@example.com', 'senha123', '901.234.567-19', 6100.00, '09:00:00', 'Endereço 19'),
-('Funcionário 20', '11987654340', 'funcionario20@example.com', 'senha123', '012.345.678-20', 6300.00, '09:00:00', 'Endereço 20');
+INSERT INTO Funcionarios (nome, telefone, email, senha, CPF, salario, horario_trabalho, endereco, sexo) VALUES
+('João Silva', '11-91234-5678', 'joao.silva@email.com', 'senha123', '123.456.789-00', 2500.00, '08:00:00', 'Rua A, 100', 'M'),
+('Maria Santos', '11-99876-5432', 'maria.santos@email.com', 'senha123', '987.654.321-00', 3000.00, '09:00:00', 'Rua B, 200', 'F'),
+('Carlos Oliveira', '11-93456-7890', 'carlos.oliveira@email.com', 'senha123', '111.222.333-44', 2800.00, '08:30:00', 'Rua C, 300', 'M'),
+('Ana Costa', '11-91234-6789', 'ana.costa@email.com', 'senha123', '444.555.666-77', 3200.00, '07:00:00', 'Rua D, 400', 'F'),
+('Lucas Lima', '11-99876-5432', 'lucas.lima@email.com', 'senha123', '222.333.444-88', 2700.00, '10:00:00', 'Rua E, 500', 'M'),
+('Tatiane Rocha', '11-94567-8901', 'tatiane.rocha@email.com', 'senha123', '555.666.777-99', 3100.00, '08:15:00', 'Rua F, 600', 'F'),
+('Felipe Dias', '11-95678-9012', 'felipe.dias@email.com', 'senha123', '666.777.888-11', 2900.00, '09:30:00', 'Rua G, 700', 'M'),
+('Beatriz Martins', '11-93456-7891', 'beatriz.martins@email.com', 'senha123', '777.888.999-22', 3000.00, '08:45:00', 'Rua H, 800', 'F'),
+('Gustavo Santos', '11-91234-5679', 'gustavo.santos@email.com', 'senha123', '888.999.000-33', 2600.00, '07:30:00', 'Rua I, 900', 'M'),
+('Fernanda Costa', '11-92345-6789', 'fernanda.costa@email.com', 'senha123', '999.000.111-44', 3200.00, '09:00:00', 'Rua J, 1000', 'F'),
+('André Ferreira', '11-91234-6780', 'andre.ferreira@email.com', 'senha123', '111.222.333-55', 2500.00, '08:00:00', 'Rua K, 1100', 'M'),
+('Isabela Almeida', '11-99876-5433', 'isabela.almeida@email.com', 'senha123', '444.555.666-66', 3000.00, '09:15:00', 'Rua L, 1200', 'F'),
+('Matheus Pereira', '11-93456-7892', 'matheus.pereira@email.com', 'senha123', '222.333.444-99', 2800.00, '08:30:00', 'Rua M, 1300', 'M'),
+('Camila Rocha', '11-91234-5670', 'camila.rocha@email.com', 'senha123', '555.666.777-88', 3200.00, '10:00:00', 'Rua N, 1400', 'F'),
+('Leonardo Dias', '11-95678-9013', 'leonardo.dias@email.com', 'senha123', '666.777.888-99', 2900.00, '08:00:00', 'Rua O, 1500', 'M'),
+('Juliana Santos', '11-94567-8902', 'juliana.santos@email.com', 'senha123', '777.888.999-00', 3000.00, '09:00:00', 'Rua P, 1600', 'F'),
+('Rafael Almeida', '11-91234-5671', 'rafael.almeida@email.com', 'senha123', '888.999.000-11', 2600.00, '07:30:00', 'Rua Q, 1700', 'M'),
+('Natália Costa', '11-99876-5434', 'natalia.costa@email.com', 'senha123', '999.000.111-22', 3200.00, '09:00:00', 'Rua R, 1800', 'F'),
+('Diego Ferreira', '11-93456-7893', 'diego.ferreira@email.com', 'senha123', '111.222.333-66', 2500.00, '08:00:00', 'Rua S, 1900', 'M'),
+('Priscila Martins', '11-91234-5672', 'priscila.martins@email.com', 'senha123', '444.555.666-22', 3000.00, '09:15:00', 'Rua T, 2000', 'F');
+
 
 
 
@@ -262,4 +265,14 @@ VALUES
 
 
 
+#pesquisar se é possivel filtrar uma coluna de uma tabela e com esse
+#resultado da filtração, pegar o resultado e armazenar em uma view 
 
+
+
+
+select*from aulas;
+select*from alunos;
+select*from planos;
+select*from pagamentos;
+select*from produtos;
