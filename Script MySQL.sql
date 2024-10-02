@@ -125,13 +125,12 @@ CREATE TABLE `pagamentos_alunos` (
   `fk_aluno_id` int NOT NULL,
   `fk_plano_id` int NOT NULL,
   `data_pagamento` date NOT NULL,
-  `status_pagamento` varchar(55) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_aluno_id` (`fk_aluno_id`),
   KEY `fk_plano_id` (`fk_plano_id`),
   CONSTRAINT `pagamentos_alunos_ibfk_1` FOREIGN KEY (`fk_aluno_id`) REFERENCES `alunos` (`id`),
   CONSTRAINT `pagamentos_alunos_ibfk_2` FOREIGN KEY (`fk_plano_id`) REFERENCES `planos` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=161 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=171 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -140,7 +139,7 @@ CREATE TABLE `pagamentos_alunos` (
 
 LOCK TABLES `pagamentos_alunos` WRITE;
 /*!40000 ALTER TABLE `pagamentos_alunos` DISABLE KEYS */;
-INSERT INTO `pagamentos_alunos` VALUES (121,1,1,'2024-01-01','Pago'),(122,1,2,'2024-01-02','Pago'),(123,2,1,'2024-01-03','Pendente'),(124,2,2,'2024-01-04','Pago'),(125,3,1,'2024-01-05','Cancelado'),(126,3,2,'2024-01-06','Pago'),(127,4,1,'2024-01-07','Pago'),(128,4,2,'2024-01-08','Pendente'),(129,5,1,'2024-01-09','Pago'),(130,5,2,'2024-01-10','Pago'),(131,6,1,'2024-01-11','Pendente'),(132,6,2,'2024-01-12','Pago'),(133,7,1,'2024-01-13','Pago'),(134,7,2,'2024-01-14','Cancelado'),(135,8,1,'2024-01-15','Pago'),(136,8,2,'2024-01-16','Pendente'),(137,9,1,'2024-01-17','Pago'),(138,9,2,'2024-01-18','Pago'),(139,10,1,'2024-01-19','Cancelado'),(140,10,2,'2024-01-20','Pago'),(141,10,1,'2024-01-21','Pendente'),(142,10,2,'2024-01-22','Pago'),(143,4,1,'2024-01-23','Pago'),(144,3,2,'2024-01-24','Pago'),(145,3,1,'2024-01-25','Cancelado'),(146,7,2,'2024-01-26','Pendente'),(147,9,1,'2024-01-27','Pago'),(148,9,2,'2024-01-28','Pago'),(149,7,1,'2024-01-29','Pendente'),(150,4,2,'2024-01-30','Pago'),(151,6,1,'2024-01-31','Pago'),(152,6,2,'2024-02-01','Cancelado'),(153,7,1,'2024-02-02','Pago'),(154,7,2,'2024-02-03','Pendente'),(155,8,1,'2024-02-04','Pago'),(156,8,2,'2024-02-05','Pago'),(157,9,1,'2024-02-06','Cancelado'),(158,9,2,'2024-02-07','Pendente'),(159,6,1,'2024-02-08','Pago'),(160,1,2,'2024-02-09','Pago');
+INSERT INTO `pagamentos_alunos` VALUES (161,1,1,'2024-01-01'),(162,2,1,'2024-01-02'),(163,3,2,'2024-01-03'),(164,4,2,'2024-01-04'),(165,5,3,'2024-01-05'),(166,1,3,'2024-01-06'),(167,2,4,'2024-01-07'),(168,3,4,'2024-01-08'),(169,4,5,'2024-01-09'),(170,5,5,'2024-01-10');
 /*!40000 ALTER TABLE `pagamentos_alunos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -155,11 +154,10 @@ CREATE TABLE `pagamentos_funcionarios` (
   `id` int NOT NULL AUTO_INCREMENT,
   `fk_funcionarios_id` int NOT NULL,
   `data_pagamento` date NOT NULL,
-  `status_pagamento` varchar(55) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_funcionarios_id` (`fk_funcionarios_id`),
   CONSTRAINT `pagamentos_funcionarios_ibfk_1` FOREIGN KEY (`fk_funcionarios_id`) REFERENCES `funcionarios` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -168,6 +166,7 @@ CREATE TABLE `pagamentos_funcionarios` (
 
 LOCK TABLES `pagamentos_funcionarios` WRITE;
 /*!40000 ALTER TABLE `pagamentos_funcionarios` DISABLE KEYS */;
+INSERT INTO `pagamentos_funcionarios` VALUES (1,1,'2024-01-01'),(2,2,'2024-01-02'),(3,3,'2024-01-03'),(4,4,'2024-01-04'),(5,5,'2024-01-05'),(6,1,'2024-01-06'),(7,2,'2024-01-07'),(8,3,'2024-01-08'),(9,4,'2024-01-09'),(10,5,'2024-01-10');
 /*!40000 ALTER TABLE `pagamentos_funcionarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -239,4 +238,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-10-02  0:16:58
+-- Dump completed on 2024-10-02 13:42:40
